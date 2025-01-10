@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BearIcon } from './bear-icon.tsx';
 import { Pomodoro } from './pomodoro.tsx';
 import { saveToLocalStorage, loadFromLocalStorage } from './utils/localStorage.ts';
+import { Analytics } from "@vercel/analytics/react"
+
 
 const TaskBoard = () => {
   const [tasks, setTasks] = useState(loadFromLocalStorage('tasks', {
