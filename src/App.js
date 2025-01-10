@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -349,7 +350,7 @@ const TaskBoard = () => {
             />
             <button
               onClick={addColumn}
-              className="flex items-center justify-center gap-2 bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700 transition-colors"
+ className="flex items-center justify-center gap-2 bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700 transition-colors"
             >
               <Plus size={20} />
               Agregar Columna
@@ -357,7 +358,7 @@ const TaskBoard = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 justify-items-center">
           {columns.map(column => (
             <Column key={column.id} columnId={column.id} tasks={tasks[column.id] || []} />
           ))}
